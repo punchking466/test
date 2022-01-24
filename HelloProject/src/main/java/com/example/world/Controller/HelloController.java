@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HelloController {
 	
 	@GetMapping("/hi")
-	    public String first(HttpServletRequest request, Model model) throws Exception {
-
+	    public String first(Model model){
+			model.addAttribute("away", "안녕!");
 			return "index";
 	    }
 
